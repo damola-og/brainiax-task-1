@@ -44,7 +44,7 @@
          */
         function signUp($email, $username, $password) {
             if (!$this->userExists($username)) {
-                $username = $email;
+               
                 $pash = password_hash($password, PASSWORD_BCRYPT);
             
                 $db = file_get_contents($this->database);
